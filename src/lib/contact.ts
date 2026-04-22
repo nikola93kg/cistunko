@@ -15,5 +15,5 @@ export function buildMailtoHref({ name, phone, message, email }: BuildMailtoHref
     message.trim() || "-",
   ].join("\n");
 
-  return `mailto:${email}?${new URLSearchParams({ subject, body }).toString()}`;
+  return `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
