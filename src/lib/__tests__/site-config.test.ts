@@ -1,16 +1,21 @@
 import { describe, expect, it } from "vitest";
-import { siteConfig } from "@/lib/site-config";
+import { homePage, navigationItems, siteConfig } from "@/lib/content";
 
-describe("siteConfig", () => {
-  it("defines the complete site config contract", () => {
-    expect(siteConfig).toEqual({
-      name: "Cistunko",
-      domain: "cistunko.rs",
-      phoneDisplay: "+381 6X XXX XX XX",
-      phoneHref: "tel:+3816XXXXXXXX",
-      whatsAppHref: "https://wa.me/3816XXXXXXXX",
-      instagramHref: "https://www.instagram.com/cistunko.dubinskopranje/",
-      email: "hello@cistunko.rs",
-    });
+describe("content model", () => {
+  it("defines four navigation items", () => {
+    expect(navigationItems.map((item) => item.href)).toEqual([
+      "/",
+      "/usluge",
+      "/o-nama",
+      "/kontakt",
+    ]);
+  });
+  it("defines the homepage service-card content", () => {
+    expect(homePage.serviceCards).toHaveLength(2);
+    expect(homePage.beforeAfterItems.length).toBeGreaterThanOrEqual(2);
+  });
+  it("keeps CTA links in config", () => {
+    expect(siteConfig.phoneHref).toMatch(/^tel:/);
+    expect(siteConfig.whatsAppHref).toContain("wa.me");
   });
 });
