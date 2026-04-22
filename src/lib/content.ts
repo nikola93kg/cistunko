@@ -42,4 +42,22 @@ export const homePage = {
   },
 } as const;
 
+export const servicesPage = {
+  title: "Usluge",
+  intro:
+    "Radimo dubinsko pranje komada i površina koje najviše trpe svakodnevnu upotrebu u domu i automobilu.",
+  categories: [
+    "Ugaone garniture i trosedi",
+    "Fotelje i stolice",
+    "Dušeci",
+    "Auto sedišta i enterijer",
+  ],
+  processTitle: "Kako izgleda proces",
+  processSteps: [
+    "Pregled stanja i dogovor oko tretmana.",
+    "Dubinsko izvlačenje nečistoće odgovarajućim sredstvima.",
+    "Završna provera i preporuka za sušenje/održavanje.",
+  ],
+} as const;
+
 export { siteConfig };
