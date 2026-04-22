@@ -14,6 +14,7 @@ export default function ServicesPage() {
       <section className="border-b border-black/10 bg-zinc-50">
         <div className="mx-auto max-w-6xl px-4 py-16 md:py-20">
           <SectionHeading
+            as="h2"
             title="Nameštaj, dušeci i auto enterijer"
             description="Dubinsko pranje prilagođavamo vrsti komada, materijalu i stepenu zaprljanja."
           />
@@ -29,7 +30,7 @@ export default function ServicesPage() {
 
       <section className="border-b border-black/10 bg-white">
         <div className="mx-auto max-w-6xl px-4 py-16 md:py-20">
-          <SectionHeading title={servicesPage.processTitle} />
+          <SectionHeading as="h2" title={servicesPage.processTitle} />
           <ol className="mt-8 grid gap-4 md:grid-cols-3">
             {servicesPage.processSteps.map((step, index) => (
               <li key={step} className="rounded-3xl border border-black/10 bg-zinc-50 p-6 shadow-sm">
