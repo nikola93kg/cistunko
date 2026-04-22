@@ -6,7 +6,7 @@ import { homePage } from "@/lib/content";
 
 export default function HomePage() {
   return (
-    <div className="bg-zinc-50 pb-28 text-black md:pb-0">
+    <div className="bg-zinc-50 text-black">
       <Hero {...homePage.hero} />
       <ServiceCards items={homePage.serviceCards} />
       <BeforeAfterGallery items={homePage.beforeAfterItems} />
