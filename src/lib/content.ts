@@ -60,4 +60,15 @@ export const servicesPage = {
   ],
 } as const;
 
+export const aboutPage = {
+  title: "O nama",
+  intro:
+    "Čistunko je fokusiran na kvalitet, urednost i poverenje — bez prenaglašenih obećanja i bez generičnog pristupa.",
+  points: [
+    "Pouzdan dogovor i brz odgovor.",
+    "Pažljiv tretman materijala i realna procena stanja.",
+    "Rezultati koji se mogu pokazati stvarnim primerima rada.",
+  ],
+} as const;
+
 export { siteConfig };
