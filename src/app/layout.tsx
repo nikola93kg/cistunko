@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { StickyCta } from "@/components/sticky-cta";
+import { buildMetadata } from "@/lib/seo";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -15,10 +16,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Cistunko.rs",
+export const metadata: Metadata = buildMetadata({
+  title: "Cistunko",
   description: "Dubinsko pranje za dom i automobil.",
-};
+  path: "/",
+});
 
 export default function RootLayout({
   children,
