@@ -34,7 +34,7 @@ export function ServiceCards({ items }: ServiceCardsProps) {
                     {item.priceLabel}
                   </span>
                 </div>
-                <h2 className="text-xl font-bold text-[#0f2a35]">{item.title}</h2>
+                <h3 className="text-xl font-bold text-[#0f2a35]">{item.title}</h3>
                 <p className="mt-2 text-sm leading-7 text-[#4a6a78]">{item.description}</p>
                 <p className="mt-4 text-xs font-semibold text-[#3cc0cc] transition-colors group-hover:text-[#189cb4]">
                   Saznaj više →

@@ -8,7 +8,7 @@ describe("about and contact pages", () => {
     render(<AboutPage />);
 
     expect(screen.getByRole("heading", { name: /o nama/i })).toBeInTheDocument();
-    expect(screen.getByText(/pouzdan/i)).toBeInTheDocument();
+    expect(screen.getAllByText(/pouzdan/i)[0]).toBeInTheDocument();
   });
 
   it("renders the contact page actions and form", () => {

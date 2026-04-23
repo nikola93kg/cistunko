@@ -1,6 +1,10 @@
 // src/test/setup.ts
+import { afterEach } from "vitest";
 import { vi } from "vitest";
+import { cleanup } from "@testing-library/react";
 import "@testing-library/jest-dom/vitest";
+
+afterEach(cleanup);
 
 // AnimatedSection uses IntersectionObserver
 (global as unknown as Record<string, unknown>).IntersectionObserver = vi
@@ -23,3 +27,7 @@ import "@testing-library/jest-dom/vitest";
       disconnect: vi.fn(),
     };
   });
+
+(global as unknown as Record<string, unknown>).CSS = {
+  registerProperty: vi.fn(),
+};
