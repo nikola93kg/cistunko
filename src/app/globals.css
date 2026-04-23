@@ -3,9 +3,58 @@
 @layer base {
   :root {
     color-scheme: light;
+    --color-primary: #3cc0cc;
+    --color-primary-dark: #189cb4;
+    --color-primary-bg: #f0fbfc;
+    --color-dark: #0f2a35;
+    --color-text: #4a6a78;
+    --gradient-primary: linear-gradient(135deg, #3cc0cc, #189cb4);
+    --gradient-whatsapp: linear-gradient(135deg, #a0c850, #7aab28);
   }
 
   body {
     margin: 0;
+    color: var(--color-text);
   }
 }
+
+/* Animation — Style C: Slide + Accent Line */
+.animate-item {
+  opacity: 0;
+  transform: translateX(-16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.is-visible .animate-item {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.accent-line {
+  width: 0;
+  height: 3px;
+  background: var(--gradient-primary);
+  border-radius: 9999px;
+  transition: width 0.7s ease;
+}
+
+.is-visible .accent-line {
+  width: 48px;
+}
+
+/* Hero page-load animations (CSS @keyframes, no JS needed) */
+@keyframes heroSlideIn {
+  from { opacity: 0; transform: translateX(-16px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes heroAccentLine {
+  from { width: 0; }
+  to   { width: 48px; }
+}
+
+.hero-accent  { animation: heroAccentLine 0.7s ease 0.3s both; }
+.hero-item-1  { animation: heroSlideIn 0.6s ease 0.45s both; }
+.hero-item-2  { animation: heroSlideIn 0.6s ease 0.6s both; }
+.hero-item-3  { animation: heroSlideIn 0.6s ease 0.75s both; }
+.hero-item-4  { animation: heroSlideIn 0.6s ease 0.9s both; }
