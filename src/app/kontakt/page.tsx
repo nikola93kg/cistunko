@@ -1,6 +1,14 @@
+import type { Metadata } from "next";
 import { ContactForm } from "@/components/contact-form";
 import { SectionHeading } from "@/components/section-heading";
 import { siteConfig } from "@/lib/content";
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Kontakt",
+  description: "Poziv, WhatsApp ili email upit — izaberite kanal koji vam najviše odgovara.",
+  path: "/kontakt",
+});
 
 const contactLinks = [
   { label: "Pozovi", href: siteConfig.phoneHref, description: siteConfig.phoneDisplay },

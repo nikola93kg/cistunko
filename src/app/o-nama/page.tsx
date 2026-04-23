@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import { SectionHeading } from "@/components/section-heading";
 import { aboutPage } from "@/lib/content";
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = buildMetadata({
+  title: "O nama",
+  description: aboutPage.intro,
+  path: "/o-nama",
+});
 
 export default function AboutPage() {
   return (

@@ -1,6 +1,14 @@
+import type { Metadata } from "next";
 import { CtaBand } from "@/components/cta-band";
 import { SectionHeading } from "@/components/section-heading";
 import { homePage, servicesPage } from "@/lib/content";
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Usluge",
+  description: servicesPage.intro,
+  path: "/usluge",
+});
 
 export default function ServicesPage() {
   return (

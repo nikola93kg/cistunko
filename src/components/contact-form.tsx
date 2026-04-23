@@ -15,7 +15,10 @@ export function ContactForm({ email }: ContactFormProps) {
   const mailtoHref = buildMailtoHref({ name, phone, message, email });
 
   return (
-    <form className="space-y-5 rounded-3xl border border-black/10 bg-white p-6 shadow-sm">
+    <form
+      className="space-y-5 rounded-3xl border border-black/10 bg-white p-6 shadow-sm"
+      onSubmit={(e) => e.preventDefault()}
+    >
       <div className="space-y-2">
         <label htmlFor="name" className="text-sm font-medium text-black">
           Ime
