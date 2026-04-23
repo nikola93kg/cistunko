@@ -14,7 +14,7 @@ describe("content model", () => {
   it("defines the expected homepage content", () => {
     expect(homePage.hero).toMatchObject({
       eyebrow: "Dubinsko pranje",
-      title: "Moderan i pouzdan servis dubinskog pranja za dom i automobil.",
+      title: "Moderan i pouzdan servis dubinskog pranja za vaš dom.",
       description:
         "Čistunko spaja premium rezultat, brz odgovor i autentičan dokaz rada kroz stvarne before/after primere.",
     });
@@ -24,12 +24,12 @@ describe("content model", () => {
       description: "Ugaone garniture, fotelje, stolice, dušeci i tapacirani komadi.",
     });
     expect(homePage.serviceCards[1]).toMatchObject({
-      title: "Auto enterijer",
-      description: "Sedišta, zadnja klupa, gepek i drugi tekstilni delovi enterijera.",
+      title: "Dušeci i jastuci",
+      description: "Dubinsko pranje dušeka, jastuci i zaštitnih navlaka. Bezbedno za decu i alergičare.",
     });
 
     expect(homePage.beforeAfterItems[0]).toMatchObject({ label: "Garnitura" });
-    expect(homePage.beforeAfterItems[1]).toMatchObject({ label: "Auto sedište" });
+    expect(homePage.beforeAfterItems[1]).toMatchObject({ label: "Fotelja" });
 
     expect(homePage.ctaBand).toEqual({
       title: "Pozovite ili pišite na WhatsApp za brz dogovor.",
