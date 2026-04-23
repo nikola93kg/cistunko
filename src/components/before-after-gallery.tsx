@@ -1,5 +1,9 @@
 // src/components/before-after-gallery.tsx
-import Image from "next/image";
+"use client";
+
+import { ReactCompareSlider, ReactCompareSliderImage } from "react-compare-slider";
+import { AnimatedSection } from "@/components/ui/animated-section";
+import { SectionHeading } from "@/components/section-heading";
 
 type BeforeAfterItem = {
   beforeSrc: string;
@@ -15,28 +19,46 @@ type BeforeAfterGalleryProps = {
 
 export function BeforeAfterGallery({ items }: BeforeAfterGalleryProps) {
   return (
-    <section className="border-b border-black/10 bg-white">
-      <div className="mx-auto max-w-6xl px-4 py-16 md:py-20">
-        <div className="max-w-2xl space-y-3">
-          <h2 className="text-3xl font-semibold tracking-tight text-black md:text-4xl">
-            Before/After proof
-          </h2>
-          <p className="text-base leading-7 text-black/70">
-            Stvarni primeri rada pomažu da odmah vidite razliku posle dubinskog pranja.
-          </p>
-        </div>
-        <div className="mt-8 grid gap-6 md:grid-cols-2">
+    <section className="border-b border-[#3cc0cc]/10 bg-white">
+      <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
+        <AnimatedSection>
+          <SectionHeading
+            as="h2"
+            title="Before/After — vidite razliku"
+            description="Stvarni primeri rada. Pomerite klizač da vidite rezultat dubinskog pranja."
+          />
+        </AnimatedSection>
+
+        <div className="mt-12 grid gap-8 md:grid-cols-2">
           {items.map((item) => (
-            <figure key={item.afterSrc} className="overflow-hidden rounded-3xl border border-black/10 bg-zinc-50 shadow-sm">
-              <Image
-                src={item.afterSrc}
-                alt={item.afterAlt}
-                width={1200}
-                height={900}
-                className="aspect-[4/3] w-full object-cover"
-              />
-              <figcaption className="px-5 py-4 text-sm font-medium text-black/70">{item.label}</figcaption>
-            </figure>
+            <AnimatedSection key={item.label}>
+              <figure className="animate-item overflow-hidden rounded-2xl border border-[#3cc0cc]/15 shadow-md">
+                <ReactCompareSlider
+                  itemOne={
+                    <ReactCompareSliderImage
+                      src={item.beforeSrc}
+                      alt={item.beforeAlt}
+                      style={{ objectFit: "cover" }}
+                    />
+                  }
+                  itemTwo={
+                    <ReactCompareSliderImage
+                      src={item.afterSrc}
+                      alt={item.afterAlt}
+                      style={{ objectFit: "cover" }}
+                    />
+                  }
+                  style={{ height: "320px" }}
+                />
+                <figcaption className="flex items-center justify-between bg-[#f0fbfc] px-5 py-3 text-sm font-semibold text-[#0f2a35]">
+                  <span>{item.label}</span>
+                  <span className="flex gap-3 text-xs text-[#4a6a78]">
+                    <span>← Pre</span>
+                    <span>Posle →</span>
+                  </span>
+                </figcaption>
+              </figure>
+            </AnimatedSection>
           ))}
         </div>
       </div>
