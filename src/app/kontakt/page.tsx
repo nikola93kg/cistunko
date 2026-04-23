@@ -2,7 +2,8 @@
 import type { Metadata } from "next";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { ContactForm } from "@/components/contact-form";
-import { PillButton } from "@/components/ui/pill-button";
+import { Icon } from "@/components/ui/icon";
+import type { IconName } from "@/components/ui/icon";
 import { SectionHeading } from "@/components/section-heading";
 import { siteConfig } from "@/lib/content";
 import { buildMetadata } from "@/lib/seo";
@@ -13,29 +14,29 @@ export const metadata: Metadata = buildMetadata({
   path: "/kontakt",
 });
 
-const contactLinks = [
+const contactLinks: { label: string; href: string; description: string; icon: IconName; variant: "secondary" | "whatsapp" }[] = [
   {
     label: "Pozovi",
     href: siteConfig.phoneHref,
     description: siteConfig.phoneDisplay,
-    icon: "📞",
-    variant: "secondary" as const,
+    icon: "Phone",
+    variant: "secondary",
   },
   {
     label: "WhatsApp",
     href: siteConfig.whatsAppHref,
     description: "Brz dogovor i odgovor u poruci.",
-    icon: "💬",
-    variant: "whatsapp" as const,
+    icon: "WhatsappLogo",
+    variant: "whatsapp",
   },
   {
     label: "Instagram",
     href: siteConfig.instagramHref,
     description: "Pogledajte stvarne primere rada.",
-    icon: "📸",
-    variant: "secondary" as const,
+    icon: "InstagramLogo",
+    variant: "secondary",
   },
-] as const;
+];
 
 export default function ContactPage() {
   return (
@@ -68,7 +69,9 @@ export default function ContactPage() {
                   className="animate-item flex items-center gap-4 rounded-2xl border border-[#3cc0cc]/15 bg-[#f0fbfc] p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#3cc0cc]/40 hover:shadow-md"
                   style={{ transitionDelay: `${i * 0.1}s` }}
                 >
-                  <span className="text-2xl">{link.icon}</span>
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#3cc0cc]/10 text-[#3cc0cc]">
+                    <Icon name={link.icon} size={20} weight="regular" aria-hidden />
+                  </div>
                   <div>
                     <p className="font-bold text-[#0f2a35]">{link.label}</p>
                     <p className="text-sm text-[#4a6a78]">{link.description}</p>

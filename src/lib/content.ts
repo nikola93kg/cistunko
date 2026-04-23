@@ -1,21 +1,8 @@
 // src/lib/content.ts
 import { siteConfig } from "@/lib/site-config";
 
-// Inline type — will be replaced with import from icon.tsx in Task 2
-export type IconName =
-  | "Armchair"
-  | "Bed"
-  | "Chair"
-  | "Leaf"
-  | "Wrench"
-  | "CheckCircle"
-  | "Phone"
-  | "WhatsappLogo"
-  | "InstagramLogo"
-  | "Wind"
-  | "ShieldCheck"
-  | "Baby"
-  | "HeartStraight";
+import type { IconName } from "@/components/ui/icon";
+export type { IconName };
 
 export type EduItem = {
   id: string;

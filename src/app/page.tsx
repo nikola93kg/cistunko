@@ -16,7 +16,7 @@ export default function HomePage() {
         mainImage={homePage.hero.mainImage}
         thumbImages={homePage.hero.thumbImages}
       />
-      <ServiceCards items={homePage.serviceCards} />
+      <ServiceCards />
       <BeforeAfterGallery items={homePage.beforeAfterItems} />
       <CtaBand {...homePage.ctaBand} />
     </div>

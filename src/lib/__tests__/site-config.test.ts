@@ -25,7 +25,7 @@ describe("content model", () => {
     });
     expect(homePage.serviceCards[1]).toMatchObject({
       title: "Dušeci i jastuci",
-      description: "Dubinsko pranje dušeka, jastuci i zaštitnih navlaka. Bezbedno za decu i alergičare.",
+      description: "Dubinsko pranje dušeka, jastuka i zaštitnih navlaka. Bezbedno za decu i alergičare.",
     });
 
     expect(homePage.beforeAfterItems[0]).toMatchObject({ label: "Garnitura" });

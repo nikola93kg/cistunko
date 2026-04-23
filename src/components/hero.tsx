@@ -1,6 +1,7 @@
 // src/components/hero.tsx
 import Image from "next/image";
 import { siteConfig } from "@/lib/content";
+import { Icon } from "@/components/ui/icon";
 import { PillButton } from "@/components/ui/pill-button";
 
 type HeroImage = { src: string; alt: string };
@@ -64,7 +65,10 @@ export function Hero({ eyebrow, title, description, trustChip, mainImage, thumbI
             />
             {/* Floating trust chip */}
             <div className="absolute bottom-4 left-4 rounded-full bg-white/95 px-4 py-2 text-xs font-semibold text-[#0f2a35] shadow-lg backdrop-blur">
-              ⭐ {trustChip}
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-4 py-1.5 text-sm font-medium text-white backdrop-blur-sm">
+                <Icon name="CheckCircle" size={16} weight="fill" aria-hidden />
+                {trustChip}
+              </span>
             </div>
           </div>
 

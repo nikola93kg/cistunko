@@ -2,6 +2,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { AnimatedSection } from "@/components/ui/animated-section";
+import { Icon } from "@/components/ui/icon";
 import { CtaBand } from "@/components/cta-band";
 import { SectionHeading } from "@/components/section-heading";
 import { aboutPage, homePage } from "@/lib/content";
@@ -42,7 +43,9 @@ export default function AboutPage() {
                   className="animate-item rounded-2xl border border-[#3cc0cc]/15 bg-[#f0fbfc] p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                   style={{ transitionDelay: `${i * 0.15}s` }}
                 >
-                  <span className="text-4xl">{value.icon}</span>
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#f0fbfc] text-[#3cc0cc]">
+                    <Icon name={value.icon} size={24} weight="regular" aria-hidden />
+                  </div>
                   <h3 className="mt-4 text-lg font-bold text-[#0f2a35]">{value.title}</h3>
                   <p className="mt-2 text-sm leading-7 text-[#4a6a78]">{value.description}</p>
                 </article>
