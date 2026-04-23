@@ -30,7 +30,7 @@ export function AnimatedSection({ children, className = "" }: AnimatedSectionPro
   }, []);
 
   return (
-    <div ref={ref} className={`animate-section ${className}`}>
+    <div ref={ref} className={["animate-section", className].filter(Boolean).join(" ")}>
       {children}
     </div>
   );
