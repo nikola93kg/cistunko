@@ -56,7 +56,7 @@ export function BeforeAfterGallery({ items }: BeforeAfterGalleryProps) {
                     style={{ height: "320px" }}
                   />
                 ) : (
-                  <div style={{ height: "320px" }} aria-hidden="true" />
+                  <div className="animate-pulse bg-[#f0fbfc]" style={{ height: "320px" }} aria-hidden="true" />
                 )}
                 <figcaption className="flex items-center justify-between bg-[#f0fbfc] px-5 py-3 text-sm font-semibold text-[#0f2a35]">
                   <span>{item.label}</span>

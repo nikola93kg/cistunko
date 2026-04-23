@@ -30,7 +30,7 @@ export function ContactForm({ email }: ContactFormProps) {
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="w-full rounded-[50px] border border-[#3cc0cc]/20 bg-[#f0fbfc] px-5 py-3 text-sm text-[#0f2a35] outline-none transition focus:border-[#3cc0cc] focus:ring-2 focus:ring-[#3cc0cc]/20"
+          className="w-full rounded-[50px] border border-[#3cc0cc]/20 bg-[#f0fbfc] px-5 py-3 text-sm text-[#0f2a35] outline-none transition focus:border-[#3cc0cc] focus:ring-2 focus:ring-[#3cc0cc]/50"
         />
       </div>
 
@@ -44,7 +44,7 @@ export function ContactForm({ email }: ContactFormProps) {
           type="tel"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
-          className="w-full rounded-[50px] border border-[#3cc0cc]/20 bg-[#f0fbfc] px-5 py-3 text-sm text-[#0f2a35] outline-none transition focus:border-[#3cc0cc] focus:ring-2 focus:ring-[#3cc0cc]/20"
+          className="w-full rounded-[50px] border border-[#3cc0cc]/20 bg-[#f0fbfc] px-5 py-3 text-sm text-[#0f2a35] outline-none transition focus:border-[#3cc0cc] focus:ring-2 focus:ring-[#3cc0cc]/50"
         />
       </div>
 
@@ -58,7 +58,7 @@ export function ContactForm({ email }: ContactFormProps) {
           rows={5}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          className="w-full rounded-2xl border border-[#3cc0cc]/20 bg-[#f0fbfc] px-5 py-3 text-sm text-[#0f2a35] outline-none transition focus:border-[#3cc0cc] focus:ring-2 focus:ring-[#3cc0cc]/20"
+          className="w-full rounded-2xl border border-[#3cc0cc]/20 bg-[#f0fbfc] px-5 py-3 text-sm text-[#0f2a35] outline-none transition focus:border-[#3cc0cc] focus:ring-2 focus:ring-[#3cc0cc]/50"
         />
       </div>
 

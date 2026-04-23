@@ -88,7 +88,9 @@ export default function ContactPage() {
       {/* Google Maps */}
       <section style={{ background: "#f0fbfc" }} className="border-b border-[#3cc0cc]/10">
         <div className="mx-auto max-w-6xl px-6 py-16">
-          <h2 className="mb-6 text-xl font-bold text-[#0f2a35]">Zona rada</h2>
+          <AnimatedSection>
+            <SectionHeading title="Zona rada" />
+          </AnimatedSection>
           <div className="overflow-hidden rounded-2xl border border-[#3cc0cc]/15 shadow-md">
             <iframe
               title="Čistunko — zona rada"
