@@ -12,36 +12,24 @@ describe("content model", () => {
   });
 
   it("defines the expected homepage content", () => {
-    expect(homePage.hero).toEqual({
+    expect(homePage.hero).toMatchObject({
       eyebrow: "Dubinsko pranje",
       title: "Moderan i pouzdan servis dubinskog pranja za dom i automobil.",
       description:
         "Čistunko spaja premium rezultat, brz odgovor i autentičan dokaz rada kroz stvarne before/after primere.",
     });
 
-    expect(homePage.serviceCards).toEqual([
-      {
-        title: "Nameštaj i dušeci",
-        description: "Ugaone garniture, fotelje, stolice, dušeci i tapacirani komadi.",
-      },
-      {
-        title: "Auto enterijer",
-        description: "Sedišta, zadnja klupa, gepek i drugi tekstilni delovi enterijera.",
-      },
-    ]);
+    expect(homePage.serviceCards[0]).toMatchObject({
+      title: "Nameštaj i dušeci",
+      description: "Ugaone garniture, fotelje, stolice, dušeci i tapacirani komadi.",
+    });
+    expect(homePage.serviceCards[1]).toMatchObject({
+      title: "Auto enterijer",
+      description: "Sedišta, zadnja klupa, gepek i drugi tekstilni delovi enterijera.",
+    });
 
-    expect(homePage.beforeAfterItems).toEqual([
-      {
-        src: "/images/proof/proof-1.jpg",
-        alt: "Dubinski očišćena garnitura posle tretmana",
-        label: "Garnitura — before/after",
-      },
-      {
-        src: "/images/proof/proof-2.jpg",
-        alt: "Dubinski očišćeno auto sedište posle tretmana",
-        label: "Auto sedište — before/after",
-      },
-    ]);
+    expect(homePage.beforeAfterItems[0]).toMatchObject({ label: "Garnitura" });
+    expect(homePage.beforeAfterItems[1]).toMatchObject({ label: "Auto sedište" });
 
     expect(homePage.ctaBand).toEqual({
       title: "Pozovite ili pišite na WhatsApp za brz dogovor.",

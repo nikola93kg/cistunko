@@ -28,8 +28,8 @@ export default function ServicesPage() {
           />
           <div className="mt-8 grid gap-4 md:grid-cols-2">
             {servicesPage.categories.map((category) => (
-              <article key={category} className="rounded-3xl border border-black/10 bg-white p-6 shadow-sm">
-                <h3 className="text-2xl font-semibold text-black">{category}</h3>
+              <article key={category.title} className="rounded-3xl border border-black/10 bg-white p-6 shadow-sm">
+                <h3 className="text-2xl font-semibold text-black">{category.title}</h3>
               </article>
             ))}
           </div>

@@ -1,8 +1,11 @@
+// src/components/before-after-gallery.tsx
 import Image from "next/image";
 
 type BeforeAfterItem = {
-  src: string;
-  alt: string;
+  beforeSrc: string;
+  afterSrc: string;
+  beforeAlt: string;
+  afterAlt: string;
   label: string;
 };
 
@@ -24,10 +27,10 @@ export function BeforeAfterGallery({ items }: BeforeAfterGalleryProps) {
         </div>
         <div className="mt-8 grid gap-6 md:grid-cols-2">
           {items.map((item) => (
-            <figure key={item.src} className="overflow-hidden rounded-3xl border border-black/10 bg-zinc-50 shadow-sm">
+            <figure key={item.afterSrc} className="overflow-hidden rounded-3xl border border-black/10 bg-zinc-50 shadow-sm">
               <Image
-                src={item.src}
-                alt={item.alt}
+                src={item.afterSrc}
+                alt={item.afterAlt}
                 width={1200}
                 height={900}
                 className="aspect-[4/3] w-full object-cover"
