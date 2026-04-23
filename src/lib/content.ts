@@ -63,7 +63,7 @@ export const homePage = {
     },
     {
       title: "Dušeci i jastuci",
-      description: "Dubinsko pranje dušeka, jastuci i zaštitnih navlaka. Bezbedno za decu i alergičare.",
+      description: "Dubinsko pranje dušeka, jastuka i zaštitnih navlaka. Bezbedno za decu i alergičare.",
       icon: "Bed" as IconName,
       priceLabel: "Od 1.500 RSD",
     },
