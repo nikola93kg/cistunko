@@ -1,3 +1,4 @@
+// src/app/page.tsx
 import { BeforeAfterGallery } from "@/components/before-after-gallery";
 import { CtaBand } from "@/components/cta-band";
 import { Hero } from "@/components/hero";
@@ -6,8 +7,15 @@ import { homePage } from "@/lib/content";
 
 export default function HomePage() {
   return (
-    <div className="bg-zinc-50 text-black">
-      <Hero {...homePage.hero} />
+    <div>
+      <Hero
+        eyebrow={homePage.hero.eyebrow}
+        title={homePage.hero.title}
+        description={homePage.hero.description}
+        trustChip={homePage.hero.trustChip}
+        mainImage={homePage.hero.mainImage}
+        thumbImages={homePage.hero.thumbImages}
+      />
       <ServiceCards items={homePage.serviceCards} />
       <BeforeAfterGallery items={homePage.beforeAfterItems} />
       <CtaBand {...homePage.ctaBand} />
