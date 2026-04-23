@@ -23,8 +23,14 @@ export default function RootLayout({
   return (
     <html lang="sr" className={`${inter.variable} h-full antialiased`}>
       <body className="pb-28 md:pb-0" style={{ fontFamily: "var(--font-inter), -apple-system, BlinkMacSystemFont, sans-serif" }}>
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-lg focus:bg-[#3cc0cc] focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white"
+        >
+          Preskoči na sadržaj
+        </a>
         <SiteHeader />
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
         <SiteFooter />
         <StickyCta />
       </body>
