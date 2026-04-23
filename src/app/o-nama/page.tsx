@@ -74,7 +74,7 @@ export default function AboutPage() {
                     className="animate-item flex items-start gap-3 text-sm leading-7 text-[#4a6a78]"
                     style={{ transitionDelay: `${0.45 + i * 0.15}s` }}
                   >
-                    <span className="mt-1 text-[#3cc0cc]">✓</span>
+                    <Icon name="CheckCircle" size={16} weight="fill" className="mt-0.5 shrink-0 text-[#3cc0cc]" aria-hidden />
                     {point}
                   </li>
                 ))}

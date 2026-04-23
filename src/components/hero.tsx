@@ -89,7 +89,7 @@ export function Hero({ eyebrow, title, description, trustChip, mainImage, thumbI
 
           {/* Pre/Posle badge */}
           <div className="absolute -right-2 top-4 rounded-full bg-gradient-to-br from-[#3cc0cc] to-[#189cb4] px-4 py-2 text-xs font-bold text-white shadow-lg">
-            Pre & Posle ✓
+            <Icon name="CheckCircle" size={14} weight="fill" aria-hidden />{" "}Pre & Posle
           </div>
         </div>
       </div>
