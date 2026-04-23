@@ -1,5 +1,6 @@
 // src/components/ui/pill-button.tsx
 import type { AnchorHTMLAttributes } from "react";
+import { twMerge } from "tailwind-merge";
 
 type Variant = "primary" | "secondary" | "whatsapp";
 
@@ -30,7 +31,7 @@ export function PillButton({
   ...props
 }: PillButtonProps) {
   return (
-    <a href={href} className={`${BASE} ${VARIANTS[variant]} ${className}`} {...props}>
+    <a href={href} className={twMerge(BASE, VARIANTS[variant], className)} {...props}>
       {children}
     </a>
   );
