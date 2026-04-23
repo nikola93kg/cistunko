@@ -13,6 +13,7 @@ import {
   WhatsappLogo,
   Wind,
   Wrench,
+  type Icon as PhosphorIcon,
 } from "@phosphor-icons/react";
 
 export type IconName =
@@ -30,8 +31,7 @@ export type IconName =
   | "Wind"
   | "Wrench";
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const ICON_REGISTRY: Record<IconName, React.ComponentType<any>> = {
+const ICON_REGISTRY: Record<IconName, PhosphorIcon> = {
   Armchair,
   Baby,
   Bed,
@@ -57,5 +57,6 @@ type IconProps = {
 
 export function Icon({ name, size = 24, weight = "regular", className, "aria-hidden": ariaHidden }: IconProps) {
   const Component = ICON_REGISTRY[name];
+  if (!Component) return null;
   return <Component size={size} weight={weight} className={className} aria-hidden={ariaHidden} />;
 }

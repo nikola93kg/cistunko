@@ -2,8 +2,7 @@
 import type { Metadata } from "next";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { ContactForm } from "@/components/contact-form";
-import { Icon } from "@/components/ui/icon";
-import type { IconName } from "@/components/ui/icon";
+import { Icon, type IconName } from "@/components/ui/icon";
 import { SectionHeading } from "@/components/section-heading";
 import { siteConfig } from "@/lib/content";
 import { buildMetadata } from "@/lib/seo";
