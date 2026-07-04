@@ -20,7 +20,11 @@ type BeforeAfterGalleryProps = {
 
 export function BeforeAfterGallery({ items }: BeforeAfterGalleryProps) {
   const [mounted, setMounted] = useState(false);
-  useEffect(() => { setMounted(true); }, []);
+
+  useEffect(() => {
+    const timeoutId = window.setTimeout(() => setMounted(true), 0);
+    return () => window.clearTimeout(timeoutId);
+  }, []);
 
   return (
     <section className="border-b border-[#3cc0cc]/10 bg-white">

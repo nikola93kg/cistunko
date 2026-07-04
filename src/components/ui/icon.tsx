@@ -1,4 +1,3 @@
-// src/components/ui/icon.tsx
 import {
   Armchair,
   Baby,
@@ -13,8 +12,8 @@ import {
   WhatsappLogo,
   Wind,
   Wrench,
-  type Icon as PhosphorIcon,
-} from "@phosphor-icons/react";
+} from "@phosphor-icons/react/ssr";
+import type { Icon as PhosphorIcon, IconWeight } from "@phosphor-icons/react";
 
 export type IconName =
   | "Armchair"
@@ -50,7 +49,7 @@ const ICON_REGISTRY: Record<IconName, PhosphorIcon> = {
 type IconProps = {
   name: IconName;
   size?: number;
-  weight?: "thin" | "light" | "regular" | "bold" | "fill" | "duotone";
+  weight?: IconWeight;
   className?: string;
   "aria-hidden"?: boolean;
 };
