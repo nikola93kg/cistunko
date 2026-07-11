@@ -18,6 +18,11 @@ describe("PillButton", () => {
     expect(container.firstChild).toHaveClass("from-[#a0c850]");
   });
 
+  test("applies viber variant classes", () => {
+    const { container } = render(<PillButton href="/" variant="viber">Viber</PillButton>);
+    expect(container.firstChild).toHaveClass("bg-[#7360f2]");
+  });
+
   test("forwards extra anchor props", () => {
     render(<PillButton href="/" target="_blank" rel="noopener noreferrer">Link</PillButton>);
     const link = screen.getByRole("link", { name: "Link" });

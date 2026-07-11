@@ -22,24 +22,18 @@ export const navigationItems = [
 export const homePage = {
   hero: {
     eyebrow: "Dubinsko pranje",
-    title: "Moderan i pouzdan servis dubinskog pranja za vaš dom.",
+    title: "Moderan i pouzdan servis dubinskog pranja za vaš dom",
     description:
       "Čistunko spaja premium rezultat, brz odgovor i autentičan dokaz rada kroz stvarne before/after primere.",
     trustChip: "100+ zadovoljnih klijenata",
-    mainImage: {
-      src: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80",
-      alt: "Dubinski čista garnitura",
+    beforeImage: {
+      src: "/hero1.webp",
+      alt: "Garnitura pre dubinskog pranja",
     },
-    thumbImages: [
-      {
-        src: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400&q=80",
-        alt: "Profesionalno pranje tepiha",
-      },
-      {
-        src: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=400&q=80",
-        alt: "Profesionalno pranje dušeka",
-      },
-    ] as const,
+    afterImage: {
+      src: "/hero2.webp",
+      alt: "Garnitura posle dubinskog pranja",
+    },
   },
   serviceCards: [
     {

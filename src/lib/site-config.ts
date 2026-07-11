@@ -4,6 +4,7 @@ export const siteConfig = {
   phoneDisplay: "+381 6X XXX XX XX",
   phoneHref: "tel:+3816XXXXXXXX",
   whatsAppHref: "https://wa.me/3816XXXXXXXX",
+  viberHref: "viber://chat?number=%2B3816XXXXXXXX",
   instagramHref: "https://www.instagram.com/cistunko.dubinskopranje/",
   email: "hello@cistunko.rs",
 } as const;

@@ -14,7 +14,7 @@ describe("content model", () => {
   it("defines the expected homepage content", () => {
     expect(homePage.hero).toMatchObject({
       eyebrow: "Dubinsko pranje",
-      title: "Moderan i pouzdan servis dubinskog pranja za vaš dom.",
+      title: "Moderan i pouzdan servis dubinskog pranja za vaš dom",
       description:
         "Čistunko spaja premium rezultat, brz odgovor i autentičan dokaz rada kroz stvarne before/after primere.",
     });
@@ -40,5 +40,6 @@ describe("content model", () => {
   it("keeps CTA links in config", () => {
     expect(siteConfig.phoneHref).toMatch(/^tel:/);
     expect(siteConfig.whatsAppHref).toContain("wa.me");
+    expect(siteConfig.viberHref).toMatch(/^viber:/);
   });
 });

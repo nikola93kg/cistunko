@@ -14,8 +14,8 @@ export default function HomePage() {
         title={homePage.hero.title}
         description={homePage.hero.description}
         trustChip={homePage.hero.trustChip}
-        mainImage={homePage.hero.mainImage}
-        thumbImages={homePage.hero.thumbImages}
+        beforeImage={homePage.hero.beforeImage}
+        afterImage={homePage.hero.afterImage}
       />
       <ServiceCards />
       <EduHighlights items={homePage.eduHighlights} />

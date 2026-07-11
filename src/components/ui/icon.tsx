@@ -3,6 +3,7 @@ import {
   Baby,
   Bed,
   Chair,
+  ChatCircleText,
   CheckCircle,
   HeartStraight,
   InstagramLogo,
@@ -20,6 +21,7 @@ export type IconName =
   | "Baby"
   | "Bed"
   | "Chair"
+  | "ChatCircleText"
   | "CheckCircle"
   | "HeartStraight"
   | "InstagramLogo"
@@ -35,6 +37,7 @@ const ICON_REGISTRY: Record<IconName, PhosphorIcon> = {
   Baby,
   Bed,
   Chair,
+  ChatCircleText,
   CheckCircle,
   HeartStraight,
   InstagramLogo,

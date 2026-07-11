@@ -9,6 +9,7 @@ describe("home page", () => {
     expect(
       screen.getByRole("heading", { name: /moderan i pouzdan servis/i }),
     ).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /viber/i })).toBeInTheDocument();
     expect(screen.getByText("Nameštaj i dušeci")).toBeInTheDocument();
     expect(screen.getByText("Dušeci i jastuci")).toBeInTheDocument();
     expect(screen.queryByText("Auto enterijer")).not.toBeInTheDocument();
